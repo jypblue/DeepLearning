@@ -1,2 +1,7 @@
+# DeepLearning Course Code
 
-DeepLearning Course Codes
+## 1. MCP Apps
+
+- [MCP Apps Readme]('./mcp/README.md')
+
+##
