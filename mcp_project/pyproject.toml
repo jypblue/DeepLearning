@@ -1,7 +1,10 @@
 [project]
-name = "mcp"
+name = "mcp-project"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "arxiv>=3.0.0",
+    "mcp>=1.27.0",
+]

@@ -2,6 +2,6 @@
 
 ## 1. MCP Apps
 
-- [MCP Apps Readme]('./mcp/README.md')
+- [MCP Apps Readme]('./mcp_project/README.md')
 
 ##
