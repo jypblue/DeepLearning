@@ -2,7 +2,8 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from mcp import ClientSession, StdioServerParameters, types
 from mcp.client.stdio import stdio_client
-from typing import List
+from typing import List, TypedDict, Dict
+from contextlib import AsyncExitStack
 import asyncio
 import nest_asyncio
 import os
@@ -10,6 +11,11 @@ import os
 nest_asyncio.apply()
 
 load_dotenv()
+
+class ToolDefinition(TypedDict):
+    name: str
+    description: str
+    input_schema: dict
 
 
 class MCP_ChatBot:
@@ -20,7 +26,10 @@ class MCP_ChatBot:
             base_url="https://api.deepseek.com",
         )
         self.model = "deepseek-chat"
-        self.available_tools: List[dict] = []
+        self.available_tools: List[ToolDefinition] = []
+        self.tool_to_session: Dict[str, ClientSession] = {}
+        self.exit_stack = AsyncExitStack()
+
 
     async def process_query(self, query):
         messages = [{'role': 'user', 'content': query}]
@@ -68,17 +77,12 @@ class MCP_ChatBot:
                     tool_args = json.loads(tool_call.function.arguments)
                     print(f"Calling tool {tool_name} with args {tool_args}")
 
-                    result = await self.session.call_tool(tool_name, arguments=tool_args)
-
-                    # Each tool result as a separate tool message
-                    result_content = result.content
-                    if isinstance(result_content, list):
-                        result_text = "\n".join(
-                            item.text if hasattr(item, 'text') else str(item)
-                            for item in result_content
-                        )
-                    else:
-                        result_text = str(result_content)
+                    # call the tool using the session   
+                    session = self.tool_to_session[tool_name]
+                    result = await session.call_tool(tool_name, arguments=tool_args)
+                    result_text = "\n".join(
+                        c.text for c in result.content if hasattr(c, "text")
+                    )
 
                     messages.append({
                         'role': 'tool',
@@ -144,10 +148,17 @@ class MCP_ChatBot:
 
                 await self.chat_loop()
 
+    async def cleanup(self):
+        """Cleanly close all resources using AsyncExitStack."""
+        await self.exit_stack.aclose()
+
 
 async def main():
     chatbot = MCP_ChatBot()
-    await chatbot.connect_to_server_and_run()
+    try:
+        await chatbot.connect_to_server_and_run()
+    finally:
+        await chatbot.cleanup()
 
 if __name__ == "__main__":
     asyncio.run(main())
