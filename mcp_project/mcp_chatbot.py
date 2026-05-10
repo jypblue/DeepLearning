@@ -118,7 +118,7 @@ class MCP_ChatBot:
             response = self.openai.chat.completions.create(**kwargs)
             message = response.choices[0].message
 
-            # 仅 tool_calls 时 message.content 为 None；不要写入 content: null，否则下一轮请求易校验失败
+            # content 为 None 时不要写入 JSON null；其余情况统一用 is not None 区分「未提供」与空串
             assistant_msg: dict = {"role": "assistant"}
             if message.tool_calls:
                 assistant_msg["tool_calls"] = [
@@ -132,12 +132,10 @@ class MCP_ChatBot:
                     }
                     for tc in message.tool_calls
                 ]
-                if message.content:
-                    assistant_msg["content"] = message.content
-            else:
-                assistant_msg["content"] = (
-                    message.content if message.content is not None else ""
-                )
+            if message.content is not None:
+                assistant_msg["content"] = message.content
+            elif not message.tool_calls:
+                assistant_msg["content"] = ""
             messages.append(assistant_msg)
 
             if message.content:
