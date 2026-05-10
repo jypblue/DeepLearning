@@ -154,7 +154,7 @@ def get_topic_papers(topic: str) -> str:
 @mcp.prompt()
 def generate_search_prompt(topic: str, num_papers: int = 5) -> str:
   """
-  Generate a prompt for Claude to find and discuss academic papers on a specific topic.
+  Generate a prompt for DeepSeek to find and discuss academic papers on a specific topic.
   """
   return f"""Search for {num_papers} academic papers about '{topic}' using the search_papers tool. Follow these instructions:
 1. First, search for papers using search_papers(topic='{topic}', max_results={num_papers})

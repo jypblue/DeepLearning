@@ -44,10 +44,18 @@ class MCP_ChatBot:
                 response = await session.list_tools()
                 for tool in response.tools:
                     self.sessions[tool.name] = session
+                    # DeepSeek / OpenAI Chat Completions：每项需 type + function.{name,description,parameters}
+                    params = tool.inputSchema if tool.inputSchema else {
+                        "type": "object",
+                        "properties": {},
+                    }
                     self.available_tools.append({
-                        "name": tool.name,
-                        "description": tool.description,
-                        "input_schema": tool.inputSchema
+                        "type": "function",
+                        "function": {
+                            "name": tool.name,
+                            "description": tool.description or "",
+                            "parameters": params,
+                        },
                     })
 
                 # List available prompts
@@ -84,51 +92,84 @@ class MCP_ChatBot:
             print(f"Error loading server config: {e}")
             raise
 
+    @staticmethod
+    def _tool_result_to_text(result) -> str:
+        parts = []
+        for block in result.content:
+            if hasattr(block, "text"):
+                parts.append(block.text)
+            else:
+                parts.append(str(block))
+        return "\n".join(parts) if parts else ""
+
     async def process_query(self, query):
-        messages = [{'role':'user', 'content':query}]
+        messages = [{"role": "user", "content": query}]
 
         while True:
-            response = self.openai.chat.completions.create(
-                max_tokens = 2024,
-                model = self.model,
-                tools = self.available_tools,
-                tool_choice = "auto",
-                messages = messages
-            )
+            kwargs = {
+                "max_tokens": 2024,
+                "model": self.model,
+                "messages": messages,
+            }
+            if self.available_tools:
+                kwargs["tools"] = self.available_tools
+                kwargs["tool_choice"] = "auto"
 
-            assistant_content = []
-            has_tool_use = False
+            response = self.openai.chat.completions.create(**kwargs)
+            message = response.choices[0].message
 
-            for content in response.content:
-                if content.type == 'text':
-                    print(content.text)
-                    assistant_content.append(content)
-                elif content.type == 'tool_use':
-                    has_tool_use = True
-                    assistant_content.append(content)
-                    messages.append({'role':'assistant', 'content':assistant_content})
+            assistant_msg = {"role": "assistant", "content": message.content}
+            if message.tool_calls:
+                assistant_msg["tool_calls"] = [
+                    {
+                        "id": tc.id,
+                        "type": "function",
+                        "function": {
+                            "name": tc.function.name,
+                            "arguments": tc.function.arguments or "{}",
+                        },
+                    }
+                    for tc in message.tool_calls
+                ]
+            messages.append(assistant_msg)
 
-                    # Get session and call tool
-                    session = self.sessions.get(content.name)
-                    if not session:
-                        print(f"Tool '{content.name}' not found.")
-                        break
+            if message.content:
+                print(message.content)
 
-                    result = await session.call_tool(content.name, arguments=content.input)
-                    messages.append({
-                        "role": "user",
-                        "content": [
-                            {
-                                "type": "tool_result",
-                                "tool_use_id": content.id,
-                                "content": result.content
-                            }
-                        ]
-                    })
-
-            # Exit loop if no tool was used
-            if not has_tool_use:
+            if not message.tool_calls:
                 break
+
+            for tc in message.tool_calls:
+                name = tc.function.name
+                try:
+                    arguments = (
+                        json.loads(tc.function.arguments)
+                        if tc.function.arguments
+                        else {}
+                    )
+                except json.JSONDecodeError:
+                    arguments = {}
+
+                session = self.sessions.get(name)
+                if not session:
+                    print(f"Tool '{name}' not found.")
+                    messages.append(
+                        {
+                            "role": "tool",
+                            "tool_call_id": tc.id,
+                            "content": f"Error: tool '{name}' not found.",
+                        }
+                    )
+                    continue
+
+                result = await session.call_tool(name, arguments=arguments)
+                messages.append(
+                    {
+                        "role": "tool",
+                        "tool_call_id": tc.id,
+                        "content": self._tool_result_to_text(result),
+                    }
+                )
 
     async def get_resource(self, resource_uri):
         session = self.sessions.get(resource_uri)
