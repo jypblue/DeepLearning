@@ -118,7 +118,8 @@ class MCP_ChatBot:
             response = self.openai.chat.completions.create(**kwargs)
             message = response.choices[0].message
 
-            assistant_msg = {"role": "assistant", "content": message.content}
+            # 仅 tool_calls 时 message.content 为 None；不要写入 content: null，否则下一轮请求易校验失败
+            assistant_msg: dict = {"role": "assistant"}
             if message.tool_calls:
                 assistant_msg["tool_calls"] = [
                     {
@@ -131,6 +132,12 @@ class MCP_ChatBot:
                     }
                     for tc in message.tool_calls
                 ]
+                if message.content:
+                    assistant_msg["content"] = message.content
+            else:
+                assistant_msg["content"] = (
+                    message.content if message.content is not None else ""
+                )
             messages.append(assistant_msg)
 
             if message.content:
