@@ -1,0 +1,92 @@
+{
+  "2502.08466v1": {
+    "title": "Searching for Nearby Diffuse Dwarf Galaxies in the COSMOS Field",
+    "authors": [
+      "Dongdong Shi",
+      "XianZhong Zheng",
+      "Zhizheng Pan",
+      "Yu Luo",
+      "Hongxia Deng",
+      "Qunzhi Hua",
+      "Xinyu Luo",
+      "Qiming Wu"
+    ],
+    "summary": "It remains challenging to systematically survey nearby diffuse dwarf galaxies\nand address the formation mechanism of this population distinguishing from\nregular ones. We carry out a pilot search for these galaxies in the COSMOS\nfield using the deep \\textit{HST}/F814W imaging data. We report three diffuse\ndwarf galaxies satisfying the criteria: (1) redshift $z<0.2$, (2) effective\nradius $r_{\\rm e}>1.0''$, and (3) central surface brightness $\\mu_{\\rm 0}>24$\nmag arcsec$^{-2}$. Two of the three galaxies, COSMOS-UDG1 and COSMOS-UDG2, are\nrecognized as ultra-diffuse galaxies (UDGs) with redshift $z=0.130$ and\n$0.049$, respectively. The third galaxy, COSMOS-dw1, is spectroscopically\nconfirmed as a dwarf galaxy at $z=0.004$. We derive the physical properties\nthrough fitting their spectral energy distributions (SEDs) extracted from deep\nmultiwavelength observations. COSMOS-dw1 has a stellar mass of\n$5.6_{-2.7}^{+2.5}\\times10^{6}$ M$_{\\odot}$, harboring neutral hydrogen gas of\nmass $4.90\\pm0.90\\times10^{6}$ M$_{\\odot}$, hinting that this galaxy may be in\nthe nascent stages of quenching. The estimated dynamical mass of\n$3.4\\times10^{7}\\,M_{\\odot}$ further suggests that COSMOS-dw1 is predominantly\nof dark matter. COSMOS-UDG1 and COSMOS-UDG2 exhibit comparable stellar masses\nof $\\sim 2\\times10^{8}$ M$_{\\odot}$. Notably, COSMOS-UDG1 is younger and more\nmetal-rich than COSMOS-UDG2 and COSMOS-dw1. Conversely, COSMOS-UDG2 and\nCOSMOS-dw1 have similar stellar metallicities, yet COSMOS-UDG2 is older than\nCOSMOS-dw1. All three galaxies adhere to the stellar mass-metallicity relation\n(MZR) for dwarf galaxies in the local Universe, implying they belong to the\ndwarf galaxy population.",
+    "pdf_url": "http://arxiv.org/pdf/2502.08466v1",
+    "published": "2025-02-12"
+  },
+  "astro-ph/9606061v1": {
+    "title": "Reduction of the COSMOS Southern Sky galaxy survey data to the RC3 standard system",
+    "authors": [
+      "J. Rousseau",
+      "H. Di Nella",
+      "G. Paturel",
+      "C. Petit"
+    ],
+    "summary": "After having cross-identified a subsample of LEDA galaxies in the COSMOS\ndatabase, we defined the best relations to convert COSMOS parameters\n(coordinates, position angle, diameter, axis ratio and apparent magnitude) into\nRC3 system used in the LEDA database. Tiny secondary effects can be tested:\ndistance to plate cenetrs effect and air-mass effect. The converted COSMOS\nparameters are used to add missing parameters on LEDA galaxies.\n  Key words: galaxies - catalogue - photometry",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9606061v1",
+    "published": "1996-06-10"
+  },
+  "0709.0411v1": {
+    "title": "Distant galaxy clusters in the COSMOS field found by HIROCS",
+    "authors": [
+      "M. Zatloukal",
+      "H. -J. R\u00f6ser",
+      "C. Wolf",
+      "H. Hippelein",
+      "S. Falter"
+    ],
+    "summary": "We present the first high-redshift galaxy cluster candidate sample from the\nHIROCS survey found in the COSMOS field. It results from a combination of\npublic COSMOS with proprietary H-band data on a 0.66 square degree part of the\nCOSMOS field and comprises 12 candidates in the redshift range 1.23 < z < 1.55.\nWe find an increasing fraction of blue cluster members with increasing\nredshift. Many of the blue and even some of the reddest member galaxies exhibit\ndisturbed morphologies as well as signs of interaction.",
+    "pdf_url": "http://arxiv.org/pdf/0709.0411v1",
+    "published": "2007-09-04"
+  },
+  "astro-ph/0503645v1": {
+    "title": "The HST Cosmos Project: Contribution from the Subaru Telescope",
+    "authors": [
+      "Yoshiaki Taniguchi",
+      "N. Z. Scoville",
+      "D. B. Sanders",
+      "B. Mobasher",
+      "H. Aussel",
+      "P. Capak",
+      "M. Ajiki",
+      "T. Murayama",
+      "S. Miyazaki",
+      "Y. Komiyama",
+      "Y. Shioya",
+      "T. Nagao",
+      "S. Sasaki",
+      "R. Sumiya",
+      "J. Koda",
+      "L. Heinlein",
+      "Y. Hatakeyama",
+      "H. Karoji",
+      "the COSMOS Team"
+    ],
+    "summary": "The Cosmic Evolution Survey (COSMOS) is a Hubble Space Telescope (HST)\ntreasury project.The COSMOS aims to perform a 2 square degree imaging survey of\nan equatorial field in $I$(F814W) band, using the Advanced Camera for Surveys\n(ACS). Such a wide field survey, combined with ground-based photometric and\nspectroscopic data, is essential to understand the interplay between large\nscale structure, evolution and formation of galaxies and dark matter. In 2004,\nwe have obtained high-quality, broad band images of the COSMOS field ($B, V,\nr^\\prime, i^\\prime,$ and $ z^\\prime$) using Suprime-Cam on the Subaru\nTelescope, and we have started our new optical multi-band program, COSMOS-21 in\n2005. Here, we present a brief summary of the current status of the COSMOS\nproject together with contributions from the Subaru Telescope. Our future\nSubaru program, COSMOS-21, is also discussed briefly.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/0503645v1",
+    "published": "2005-03-30"
+  },
+  "astro-ph/0612314v1": {
+    "title": "The VLA-COSMOS Survey: II. Source Catalog of the Large Project",
+    "authors": [
+      "E. Schinnerer",
+      "V. Smolcic",
+      "C. L. Carilli",
+      "M. Bondi",
+      "P. Ciliegi",
+      "K. Jahnke",
+      "N. Z. Scoville",
+      "H. Aussel",
+      "F. Bertoldi",
+      "A. W. Blain",
+      "C. D. Impey",
+      "A. M. Koekemoer",
+      "O. Le Fevre",
+      "C. M. Urry"
+    ],
+    "summary": "The VLA-COSMOS large project is described and its scientific objective is\ndiscussed. We present a catalog of ~ 3,600 radio sources found in the 2deg^2\nCOSMOS field at 1.4 GHz. The observations in the VLA A and C configuration\nresulted in a resolution of 1.5''x1.4'' and a mean rms noise of ~ 10.5(15)\nuJy/beam in the central 1(2)deg^2. 80 radio sources are clearly extended\nconsisting of multiple components, and most of them appear to be double-lobed\nradio galaxies. The astrometry of the catalog has been thoroughly tested and\nthe uncertainty in the relative and absolute astrometry are 130mas and <55mas,\nrespectively.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/0612314v1",
+    "published": "2006-12-12"
+  }
+}

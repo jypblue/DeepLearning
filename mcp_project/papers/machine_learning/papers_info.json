@@ -1,0 +1,49 @@
+{
+  "1909.03550v1": {
+    "title": "Lecture Notes: Optimization for Machine Learning",
+    "authors": [
+      "Elad Hazan"
+    ],
+    "summary": "Lecture notes on optimization for machine learning, derived from a course at\nPrinceton University and tutorials given in MLSS, Buenos Aires, as well as\nSimons Foundation, Berkeley.",
+    "pdf_url": "http://arxiv.org/pdf/1909.03550v1",
+    "published": "2019-09-08"
+  },
+  "1811.04422v1": {
+    "title": "An Optimal Control View of Adversarial Machine Learning",
+    "authors": [
+      "Xiaojin Zhu"
+    ],
+    "summary": "I describe an optimal control view of adversarial machine learning, where the\ndynamical system is the machine learner, the input are adversarial actions, and\nthe control costs are defined by the adversary's goals to do harm and be hard\nto detect. This view encompasses many types of adversarial machine learning,\nincluding test-item attacks, training-data poisoning, and adversarial reward\nshaping. The view encourages adversarial machine learning researcher to utilize\nadvances in control theory and reinforcement learning.",
+    "pdf_url": "http://arxiv.org/pdf/1811.04422v1",
+    "published": "2018-11-11"
+  },
+  "1707.04849v1": {
+    "title": "Minimax deviation strategies for machine learning and recognition with short learning samples",
+    "authors": [
+      "Michail Schlesinger",
+      "Evgeniy Vodolazskiy"
+    ],
+    "summary": "The article is devoted to the problem of small learning samples in machine\nlearning. The flaws of maximum likelihood learning and minimax learning are\nlooked into and the concept of minimax deviation learning is introduced that is\nfree of those flaws.",
+    "pdf_url": "http://arxiv.org/pdf/1707.04849v1",
+    "published": "2017-07-16"
+  },
+  "1909.09246v1": {
+    "title": "Machine Learning for Clinical Predictive Analytics",
+    "authors": [
+      "Wei-Hung Weng"
+    ],
+    "summary": "In this chapter, we provide a brief overview of applying machine learning\ntechniques for clinical prediction tasks. We begin with a quick introduction to\nthe concepts of machine learning and outline some of the most common machine\nlearning algorithms. Next, we demonstrate how to apply the algorithms with\nappropriate toolkits to conduct machine learning experiments for clinical\nprediction tasks. The objectives of this chapter are to (1) understand the\nbasics of machine learning techniques and the reasons behind why they are\nuseful for solving clinical prediction problems, (2) understand the intuition\nbehind some machine learning models, including regression, decision trees, and\nsupport vector machines, and (3) understand how to apply these models to\nclinical prediction problems using publicly available datasets via case\nstudies.",
+    "pdf_url": "http://arxiv.org/pdf/1909.09246v1",
+    "published": "2019-09-19"
+  },
+  "2301.09753v1": {
+    "title": "Towards Modular Machine Learning Solution Development: Benefits and Trade-offs",
+    "authors": [
+      "Samiyuru Menik",
+      "Lakshmish Ramaswamy"
+    ],
+    "summary": "Machine learning technologies have demonstrated immense capabilities in\nvarious domains. They play a key role in the success of modern businesses.\nHowever, adoption of machine learning technologies has a lot of untouched\npotential. Cost of developing custom machine learning solutions that solve\nunique business problems is a major inhibitor to far-reaching adoption of\nmachine learning technologies. We recognize that the monolithic nature\nprevalent in today's machine learning applications stands in the way of\nefficient and cost effective customized machine learning solution development.\nIn this work we explore the benefits of modular machine learning solutions and\ndiscuss how modular machine learning solutions can overcome some of the major\nsolution engineering limitations of monolithic machine learning solutions. We\nanalyze the trade-offs between modular and monolithic machine learning\nsolutions through three deep learning problems; one text based and the two\nimage based. Our experimental results show that modular machine learning\nsolutions have a promising potential to reap the solution engineering\nadvantages of modularity while gaining performance and data advantages in a way\nthe monolithic machine learning solutions do not permit.",
+    "pdf_url": "http://arxiv.org/pdf/2301.09753v1",
+    "published": "2023-01-23"
+  }
+}

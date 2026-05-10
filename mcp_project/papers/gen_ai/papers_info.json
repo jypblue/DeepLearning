@@ -1,0 +1,59 @@
+{
+  "2410.11977v4": {
+    "title": "Generative AI Policies under the Microscope: How CS Conferences Are Navigating the New Frontier in Scholarly Writing",
+    "authors": [
+      "Mahjabin Nahar",
+      "Sian Lee",
+      "Rebekah Guillen",
+      "Dongwon Lee"
+    ],
+    "summary": "As the use of Generative AI (Gen-AI) in scholarly writing and peer reviews\ncontinues to rise, it is essential for the computing field to establish and\nadopt clear Gen-AI policies. This study examines the landscape of Gen-AI\npolicies across 64 major Computer Science conferences and offers\nrecommendations for promoting more effective and responsible use of Gen-AI in\nthe field.",
+    "pdf_url": "http://arxiv.org/pdf/2410.11977v4",
+    "published": "2024-10-15"
+  },
+  "2305.02878v1": {
+    "title": "The AI generation gap: Are Gen Z students more interested in adopting generative AI such as ChatGPT in teaching and learning than their Gen X and Millennial Generation teachers?",
+    "authors": [
+      "Cecilia Ka Yuk Chan",
+      "Katherine K. W. Lee"
+    ],
+    "summary": "This study aimed to explore the experiences, perceptions, knowledge,\nconcerns, and intentions of Gen Z students with Gen X and Gen Y teachers\nregarding the use of generative AI (GenAI) in higher education. A sample of\nstudents and teachers were recruited to investigate the above using a survey\nconsisting of both open and closed questions. The findings showed that Gen Z\nparticipants were generally optimistic about the potential benefits of GenAI,\nincluding enhanced productivity, efficiency, and personalized learning, and\nexpressed intentions to use GenAI for various educational purposes. Gen X and\nGen Y teachers acknowledged the potential benefits of GenAI but expressed\nheightened concerns about overreliance, ethical and pedagogical implications,\nemphasizing the need for proper guidelines and policies to ensure responsible\nuse of the technology. The study highlighted the importance of combining\ntechnology with traditional teaching methods to provide a more effective\nlearning experience. Implications of the findings include the need to develop\nevidence-based guidelines and policies for GenAI integration, foster critical\nthinking and digital literacy skills among students, and promote responsible\nuse of GenAI technologies in higher education.",
+    "pdf_url": "http://arxiv.org/pdf/2305.02878v1",
+    "published": "2023-05-04"
+  },
+  "2502.08056v1": {
+    "title": "Cognify: Supercharging Gen-AI Workflows With Hierarchical Autotuning",
+    "authors": [
+      "Zijian He",
+      "Reyna Abhyankar",
+      "Vikranth Srivatsa",
+      "Yiying Zhang"
+    ],
+    "summary": "Today's gen-AI workflows that involve multiple ML model calls, tool/API\ncalls, data retrieval, or generic code execution are often tuned manually in an\nad-hoc way that is both time-consuming and error-prone. In this paper, we\npropose a systematic approach for automatically tuning gen-AI workflows. Our\nkey insight is that gen-AI workflows can benefit from structure, operator, and\nprompt changes, but unique properties of gen-AI workflows require new\noptimization techniques. We propose AdaSeek, an adaptive hierarchical search\nalgorithm for autotuning gen-AI workflows. AdaSeek organizes workflow tuning\nmethods into different layers based on the user-specified total search budget\nand distributes the budget across different layers based on the complexity of\neach layer. During its hierarchical search, AdaSeek redistributes the search\nbudget from less useful to more promising tuning configurations based on\nworkflow-level evaluation results. We implement AdaSeek in a workflow\nautotuning framework called Cognify and evaluate Cognify using six types of\nworkflows such as RAG-based QA and text-to-SQL transformation. Overall, Cognify\nimproves these workflows' generation quality by up to 2.8x, reduces execution\nmonetary cost by up to 10x, and reduces end-to-end latency by 2.7x.",
+    "pdf_url": "http://arxiv.org/pdf/2502.08056v1",
+    "published": "2025-02-12"
+  },
+  "2306.08310v2": {
+    "title": "TWIGMA: A dataset of AI-Generated Images with Metadata From Twitter",
+    "authors": [
+      "Yiqun Chen",
+      "James Zou"
+    ],
+    "summary": "Recent progress in generative artificial intelligence (gen-AI) has enabled\nthe generation of photo-realistic and artistically-inspiring photos at a single\nclick, catering to millions of users online. To explore how people use gen-AI\nmodels such as DALLE and StableDiffusion, it is critical to understand the\nthemes, contents, and variations present in the AI-generated photos. In this\nwork, we introduce TWIGMA (TWItter Generative-ai images with MetadatA), a\ncomprehensive dataset encompassing over 800,000 gen-AI images collected from\nJan 2021 to March 2023 on Twitter, with associated metadata (e.g., tweet text,\ncreation date, number of likes), available at\nhttps://zenodo.org/records/8031785. Through a comparative analysis of TWIGMA\nwith natural images and human artwork, we find that gen-AI images possess\ndistinctive characteristics and exhibit, on average, lower variability when\ncompared to their non-gen-AI counterparts. Additionally, we find that the\nsimilarity between a gen-AI image and natural images is inversely correlated\nwith the number of likes. Finally, we observe a longitudinal shift in the\nthemes of AI-generated images on Twitter, with users increasingly sharing\nartistically sophisticated content such as intricate human portraits, whereas\ntheir interest in simple subjects such as natural scenes and animals has\ndecreased. Our findings underscore the significance of TWIGMA as a unique data\nresource for studying AI-generated images.",
+    "pdf_url": "http://arxiv.org/pdf/2306.08310v2",
+    "published": "2023-06-14"
+  },
+  "2502.09479v1": {
+    "title": "Assessing Generative AI value in a public sector context: evidence from a field experiment",
+    "authors": [
+      "Trevor Fitzpatrick",
+      "Seamus Kelly",
+      "Patrick Carey",
+      "David Walsh",
+      "Ruairi Nugent"
+    ],
+    "summary": "The emergence of Generative AI (Gen AI) has motivated an interest in\nunderstanding how it could be used to enhance productivity across various\ntasks. We add to research results for the performance impact of Gen AI on\ncomplex knowledge-based tasks in a public sector setting. In a pre-registered\nexperiment, after establishing a baseline level of performance, we find mixed\nevidence for two types of composite tasks related to document understanding and\ndata analysis. For the Documents task, the treatment group using Gen AI had a\n17% improvement in answer quality scores (as judged by human evaluators) and a\n34% improvement in task completion time compared to a control group. For the\nData task, we find the Gen AI treatment group experienced a 12% reduction in\nquality scores and no significant difference in mean completion time compared\nto the control group. These results suggest that the benefits of Gen AI may be\ntask and potentially respondent dependent. We also discuss field notes and\nlessons learned, as well as supplementary insights from a post-trial survey and\nfeedback workshop with participants.",
+    "pdf_url": "http://arxiv.org/pdf/2502.09479v1",
+    "published": "2025-02-13"
+  }
+}

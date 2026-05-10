@@ -1,0 +1,15 @@
+{
+  "2212.04614v4": {
+    "title": "Is Bio-Inspired Learning Better than Backprop? Benchmarking Bio Learning vs. Backprop",
+    "authors": [
+      "Manas Gupta",
+      "Sarthak Ketanbhai Modi",
+      "Hang Zhang",
+      "Joon Hei Lee",
+      "Joo Hwee Lim"
+    ],
+    "summary": "Bio-inspired learning has been gaining popularity recently given that\nBackpropagation (BP) is not considered biologically plausible. Many algorithms\nhave been proposed in the literature which are all more biologically plausible\nthan BP. However, apart from overcoming the biological implausibility of BP, a\nstrong motivation for using Bio-inspired algorithms remains lacking. In this\nstudy, we undertake a holistic comparison of BP vs. multiple Bio-inspired\nalgorithms to answer the question of whether Bio-learning offers additional\nbenefits over BP. We test Bio-algorithms under different design choices such as\naccess to only partial training data, resource constraints in terms of the\nnumber of training epochs, sparsification of the neural network parameters and\naddition of noise to input samples. Through these experiments, we notably find\ntwo key advantages of Bio-algorithms over BP. Firstly, Bio-algorithms perform\nmuch better than BP when the entire training dataset is not supplied. Four of\nthe five Bio-algorithms tested outperform BP by upto 5% accuracy when only 20%\nof the training dataset is available. Secondly, even when the full dataset is\navailable, Bio-algorithms learn much quicker and converge to a stable accuracy\nin far lesser training epochs than BP. Hebbian learning, specifically, is able\nto learn in just 5 epochs compared to around 100 epochs required by BP. These\ninsights present practical reasons for utilising Bio-learning beyond just their\nbiological plausibility and also point towards interesting new directions for\nfuture work on Bio-learning.",
+    "pdf_url": "http://arxiv.org/pdf/2212.04614v4",
+    "published": "2022-12-09"
+  }
+}

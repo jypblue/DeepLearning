@@ -1,0 +1,17 @@
+{
+  "2507.07998v1": {
+    "title": "PyVision: Agentic Vision with Dynamic Tooling",
+    "authors": [
+      "Shitian Zhao",
+      "Haoquan Zhang",
+      "Shaoheng Lin",
+      "Ming Li",
+      "Qilong Wu",
+      "Kaipeng Zhang",
+      "Chen Wei"
+    ],
+    "summary": "LLMs are increasingly deployed as agents, systems capable of planning,\nreasoning, and dynamically calling external tools. However, in visual\nreasoning, prior approaches largely remain limited by predefined workflows and\nstatic toolsets. In this report, we present PyVision, an interactive,\nmulti-turn framework that enables MLLMs to autonomously generate, execute, and\nrefine Python-based tools tailored to the task at hand, unlocking flexible and\ninterpretable problem-solving. We develop a taxonomy of the tools created by\nPyVision and analyze their usage across a diverse set of benchmarks.\nQuantitatively, PyVision achieves consistent performance gains, boosting\nGPT-4.1 by +7.8% on V* and Claude-4.0-Sonnet by +31.1% on VLMsAreBlind-mini.\nThese results point to a broader shift: dynamic tooling allows models not just\nto use tools, but to invent them, advancing toward more agentic visual\nreasoning.",
+    "pdf_url": "http://arxiv.org/pdf/2507.07998v1",
+    "published": "2025-07-10"
+  }
+}
